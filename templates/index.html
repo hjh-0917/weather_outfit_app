@@ -7,17 +7,25 @@
         body { font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; padding: 0 10px; background: #f8f9fa; }
         h1 { color: #2c3e50; }
         form { margin-bottom: 20px; }
-        input, button { padding: 10px; font-size: 1rem; margin-top: 5px; }
-        button { cursor: pointer; background-color: #3498db; border: none; color: white; }
+        input, button { padding: 10px; font-size: 1rem; margin-top: 5px; width: 100%; box-sizing: border-box; }
+        button { cursor: pointer; background-color: #3498db; border: none; color: white; margin-top: 15px; }
         .card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-top: 20px; }
         .outfit { font-size: 1.2rem; color: #27ae60; margin-top: 10px; }
+        label { margin-top: 10px; display: block; font-weight: bold; }
     </style>
 </head>
 <body>
     <h1>한국 도시 날씨 & 코디 추천</h1>
     <form method="post">
-        <label>도시명 (예: 서울, 부산, 제주):</label><br>
+        <label>도시명 (예: 서울, 부산, 제주):</label>
         <input name="city" required placeholder="도시명을 입력하세요">
+
+        <label>성별 (남성 / 여성):</label>
+        <input name="gender" required placeholder="성별을 입력하세요">
+
+        <label>나이 (숫자만):</label>
+        <input name="age" required type="number" min="1" placeholder="나이를 입력하세요">
+
         <button type="submit">조회</button>
     </form>
 
